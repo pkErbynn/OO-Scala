@@ -37,37 +37,9 @@ object MyApp extends App {
 
 
     def numOfTimes(word: String, times: Integer) = print( word * times)
-    numOfTimes("erbynn", 5)
+    val n = numOfTimes("erbynn", 5)
 
-
-    /*
-    3.+ (3)
-
-class Person
-val person = new Person
-person.toString
-
-
-class Person(val fn: String, val ln: String)
-val p = new Person("john", "erbynn")
-p.fn
-p.ln
-
-// with default val
-class Car(val color: String, val brand: String = "corola"){
-  println(s"$color $brand constructed")
-  def this(color: String) = this(color, "wine")
-}
-val car = new Car("red", "toyota")
-car.brand
-val car2 = new Car("blue")
-
-// no field Car
-class Car2(color: String, brand: String = "corola"){
-  val carrr = s"$color $brand constructed"
- }
-val c = new Car2("white", "foo")
-c.carrr
-     */
-
+    //def numOfTimes(word: String, times: Int) = for (_ <- 1 to times) print(s"$word")
+    def numOfTimes(word: String, times: Int) = for (x <- 1 to times) print(x + " ")
+    val n = numOfTimes("erbynn", 5)
 }
