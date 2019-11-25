@@ -1,5 +1,5 @@
 package io.turntabl.scalagettingstarted
 
-object SamsApp extends App {
+object MyApp extends App {
     print("Hello, World!")
 }
