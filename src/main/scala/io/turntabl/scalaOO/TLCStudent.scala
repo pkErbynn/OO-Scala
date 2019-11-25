@@ -12,7 +12,7 @@ class TLCStudent(val fname: String,
   val thisYear: Int = Year.now.getValue
   def termOfService(year: Int) =  thisYear - year
 
-  def sameTermOfService_?(student: TLCStudent) = student.thisYear eq thisYear   // stu.thisYear.equal(thisYear)
+  def sameTermOfService_?(student: TLCStudent, year:Int) = student.termOfService(year) eq termOfService(year)   // stu.thisYear.equal(thisYear)
 
 }
 
@@ -21,6 +21,5 @@ object TLCStudent{    // object + same class name.....hence, companion
   def apply(fname: String,
             lname: String,
             githubURL: String): TLCStudent = new TLCStudent(fname, lname, githubURL)  // factory(), hence no `new` keyword in construction
-
 }
 

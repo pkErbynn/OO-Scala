@@ -1,3 +1,3 @@
 package io.turntabl.grades
 
-case class Grace()
+case class Grace(subject: String, grad: Int)
