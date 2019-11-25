@@ -16,7 +16,15 @@ object MyApp extends App {
 
     def odd_?(num: Int)= !even_?(num)
 
+
     def wordsToLowerCase(words: String*) = words map (_.toLowerCase())
 //    def wordsToLowerCase(words: String*) = words.map(_.toLowerCase())        // similar to java
     wordsToLowerCase("HEY", "JOHN")
+
+
+    def isWeekendDay(day: String) = day match {
+        case "monday" | "tuesday" | "wednesday" | "thursday" | "friday" => true
+        case  _ => false
+    }
+    isWeekendDay("monday")
 }
