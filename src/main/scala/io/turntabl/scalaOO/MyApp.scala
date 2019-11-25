@@ -1,45 +1,12 @@
 package io.turntabl.scalaOO
 
+import io.turntabl.students.TLCStudent
+
 object MyApp extends App {
-    print("Hello, Pkay")
+    val student1 = new TLCStudent("john", "erbynn", "github.com/pkerbynn", 2015)
+    val student2 = new TLCStudent("anthony", "erbynn")
 
-    val fname = "John"
-    val town = "Elmina"
-    print(s"$fname was born in $town")
+    println(student1)
+    println(student2)
 
-    // can try in scratch pad
-    def threeTimes(name: String) = name * 3     // 3 * name...doesnt work
-    threeTimes("Erbynn")
-
-    def even_?(num: Int) = num % 2 == 0
-    even_?(3)
-
-    def odd_?(num: Int)= !even_?(num)
-
-
-    def wordsToLowerCase(words: String*) = words map (_.toLowerCase())
-//    def wordsToLowerCase(words: String*) = words.map(_.toLowerCase())        // similar to java
-    wordsToLowerCase("HEY", "JOHN")
-
-
-    def isWeekendDay_?(day: String) = day match {
-        case "saturday" | "sunday"  => true
-        case  _ => false
-    }
-    isWeekendDay_?("monday")
-
-
-    def areWeekendDays_?(days: String*) = days map(d => isWeekendDay_?(d))
-    areWeekendDays_?("monday", "tuesday", "saturday")
-
-    // printing with foreach
-    areWeekendDays_?("monday", "tuesday", "saturday").foreach(println)
-
-
-    def numOfTimes(word: String, times: Integer) = print( word * times)
-    val n = numOfTimes("erbynn", 5)
-
-    //def numOfTimes(word: String, times: Int) = for (_ <- 1 to times) print(s"$word")
-    def numOfTimes(word: String, times: Int) = for (x <- 1 to times) print(x + " ")
-    val n = numOfTimes("erbynn", 5)
 }
