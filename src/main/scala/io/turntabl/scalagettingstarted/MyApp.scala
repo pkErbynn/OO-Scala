@@ -30,7 +30,11 @@ object MyApp extends App {
 
 
     def areWeekendDays_?(days: String*) = days map(d => isWeekendDay_?(d))
-    isWeekendDay_?("monday")
+    areWeekendDays_?("monday", "tuesday", "saturday")
+
+    // printing with foreach
+    areWeekendDays_?("monday", "tuesday", "saturday").foreach(println)
+
 
     def numOfTimes(word: String, times: Integer) = print( word * times)
     numOfTimes("erbynn", 5)
