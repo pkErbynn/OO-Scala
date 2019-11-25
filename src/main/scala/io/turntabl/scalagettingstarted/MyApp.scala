@@ -22,12 +22,15 @@ object MyApp extends App {
     wordsToLowerCase("HEY", "JOHN")
 
 
-    def isWeekendDay(day: String) = day match {
-        case "monday" | "tuesday" | "wednesday" | "thursday" | "friday" => true
+    def isWeekendDay_?(day: String) = day match {
+        case "saturday" | "sunday"  => true
         case  _ => false
     }
-    isWeekendDay("monday")
+    isWeekendDay_?("monday")
 
+
+    def areWeekendDays_?(days: String*) = days map(d => isWeekendDay_?(d))
+    isWeekendDay_?("monday")
 
     def numOfTimes(word: String, times: Integer) = print( word * times)
     numOfTimes("erbynn", 5)
