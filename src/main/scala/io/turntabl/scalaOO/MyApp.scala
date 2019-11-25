@@ -1,4 +1,4 @@
-package io.turntabl.scalagettingstarted
+package io.turntabl.scalaOO
 
 object MyApp extends App {
     print("Hello, Pkay")
