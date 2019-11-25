@@ -5,7 +5,7 @@ plugins {
 
 group 'io.turntabl'
 version '1.0-SNAPSHOT'
-mainClassName = 'SamsApp'
+mainClassName = 'io.turntabl.scalagettingstarted.MyApp'
 
 sourceCompatibility = 1.8
 
