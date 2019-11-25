@@ -27,4 +27,10 @@ object MyApp extends App {
         case  _ => false
     }
     isWeekendDay("monday")
+
+
+    def numOfTimes(word: String, times: Integer) = print( word * times)
+    numOfTimes("erbynn", 5)
+
+
 }
