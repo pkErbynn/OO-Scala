@@ -14,12 +14,13 @@ class TLCStudent(val fname: String,
   def sameTermOfService_?(student: TLCStudent, year: Int): Boolean = student.termOfService equals termOfService   // since many params, hence ":"
 
   import io.turntabl.grades._
-  // def evaluated at each construction...for val, once
-  val topGrade: Grade = Grade("Financial Basics", 95.5)
+  val topGrade: Grade = Grade("Financial Basics", 95.5) // def evaluated at each construction...for val, once
 
   override val GetWorkload: String = "works supper hard :)"
 
 }
+
+
 
 // factory method (ie. apply()) with companion object
 // i think, static members goes in here
