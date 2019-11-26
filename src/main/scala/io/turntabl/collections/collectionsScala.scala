@@ -13,6 +13,7 @@ class collectionsScala {
   capitals.getOrElse("norway", "unknown")
 
   val names = Set("justice", "onga", "peter", "samuel", "samuel")
+  names ++ Set("john", "erbynn")
   names count (e => e == "samuel"); // names count(_=="samuel")
 
   val nameList = List("raph", "anthony", "grace", "boyd", "selase")
