@@ -5,18 +5,18 @@ import java.time.Year
 class TLCStudent(val fname: String,
                  val lname: String,
                  val githubURL: String = "https://github.com/turntabl",
-//                 year: Int = Year.now.getValue   // constructor param and not instance field...
-                 val year: Int = Year.now.getValue   // constructor param and not field
+                 year: Int = 2016   // constructor param and not instance field...
                 ){
   override def toString: String = s"$fname $lname"
 
-  val thisYear: Int = Year.now.getValue toInt
-  def termOfService(year: Int) =  thisYear - year
+  def termOfService =  Year.now.getValue - year
 
-  def sameTermOfService_?(student: TLCStudent, year: Int) = student.termOfService(student.year) equals termOfService(year)   // stu.thisYear.equal(thisYear)
+  def sameTermOfService_?(student: TLCStudent, year: Int): Boolean = student.termOfService equals termOfService   // since many params, hence ":"
 
   import io.turntabl.grades._
-  def topGrade() = Grade("Java OO", 99)
+  // def evaluated at each construction...for val, once
+  val topGrade = Grade("Java OO", 79.99)
+//  val topGrade2: Grade = Grade("Financial Basics", 95.5)    // ...mean variable with return type "Grade" ?
 
 }
 
